@@ -5,7 +5,7 @@ export const store = configureStore({
     reducer: {
         posts: postsSlice
     },
-    devTools: true
+    devTools: import.meta.env.NODE_ENV !== 'production'
 })
 
 export type RootStore = ReturnType<typeof store.getState>
